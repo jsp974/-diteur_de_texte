@@ -27,7 +27,9 @@ public class Document {
     }
 
     public void majuscules(int debut, int fin) {
-        texte.substring(debut, fin).toUpperCase();
+        String debutTexte = texte.substring(0, debut);
+        String finTexte = texte.substring(fin);
+        texte = debutTexte + texte.substring(debut, fin).toUpperCase() + finTexte;
     }
 
     @Override
