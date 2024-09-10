@@ -27,7 +27,7 @@ public class Document {
     }
 
     public void majuscules(int debut, int fin) {
-        //TO-DO!
+        texte.substring(debut, fin).toUpperCase();
     }
 
     @Override
