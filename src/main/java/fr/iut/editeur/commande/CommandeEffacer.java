@@ -20,5 +20,10 @@ public class CommandeEffacer extends CommandeDocument {
         this.document.effacer(Integer.parseInt(debut), Integer.parseInt(fin));
         super.executer();
     }
+
+    public String  getDescriptionCommande() {
+        return "Supprime une un texte entre le debut et la fin";
+    }
+
 }
 

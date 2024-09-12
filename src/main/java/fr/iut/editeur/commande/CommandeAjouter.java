@@ -20,4 +20,8 @@ public class CommandeAjouter extends CommandeDocument {
         super.executer();
     }
 
+    public String  getDescriptionCommande() {
+        return "Ajoute un texte à la fin";
+    }
+
 }

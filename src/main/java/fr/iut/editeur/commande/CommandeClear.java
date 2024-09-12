@@ -20,4 +20,8 @@ public class CommandeClear extends CommandeDocument {
         super.executer();
     }
 
+    public String  getDescriptionCommande() {
+        return "supprime tout le texte";
+    }
+
 }

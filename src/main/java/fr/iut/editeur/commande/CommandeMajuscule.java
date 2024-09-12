@@ -20,4 +20,9 @@ public class CommandeMajuscule extends CommandeDocument {
         this.document.majuscules(Integer.parseInt(debut), Integer.parseInt(fin));
         super.executer();
     }
+
+    public String  getDescriptionCommande() {
+        return "Met en maj entre les 2 endroit indiqué";
+    }
+
 }

@@ -21,5 +21,8 @@ public class CommandeInserer extends CommandeDocument {
         super.executer();
     }
 
+    public String  getDescriptionCommande() {
+        return "Ajoute un texte à l'endroit indiqué";
+    }
 
 }
