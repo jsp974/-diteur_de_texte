@@ -26,4 +26,8 @@ public class CommandeRemplacer extends CommandeDocument {
         super.executer();
     }
 
+    public String  getDescriptionCommande() {
+        return "remplace le texte entre les 2 enroit indiqué par celui indiqué";
+    }
+
 }
