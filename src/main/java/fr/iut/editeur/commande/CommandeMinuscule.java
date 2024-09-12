@@ -2,9 +2,9 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
-public class CommandeMinuscules extends CommandeDocument {
+public class CommandeMinuscule extends CommandeDocument {
 
-    public CommandeMinuscules(Document document, String[] parameters) {
+    public CommandeMinuscule(Document document, String[] parameters) {
         super(document, parameters);
     }
 
