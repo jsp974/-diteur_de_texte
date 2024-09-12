@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  job1:
+    runs-on: ubuntu-latest #Tourne sur une VM ubuntu
+    steps: #Etapes à réaliser sur le système
+      #On se place dans le dépôt...
+      - name: Checkout
+        uses: actions/checkout@v4
+      #On installe java
+      - name: install java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'oracle'
+      #Suite des actions...
+      - name: run
+        uses: mvn test
