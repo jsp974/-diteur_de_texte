@@ -10,7 +10,7 @@ public class CommandeMinuscule extends CommandeDocument {
 
     @Override
     public void executer() {
-        if(parameters.length < 2) {
+        if (parameters.length < 2) {
             System.err.println("Format attendu : minuscules;debut;fin");
             return;
         }
@@ -19,5 +19,9 @@ public class CommandeMinuscule extends CommandeDocument {
         String fin = parameters[2];
         this.document.minuscules(Integer.parseInt(debut), Integer.parseInt(fin));
         super.executer();
+    }
+    @Override
+   public String getDescriptionCommande(){
+        return "transformation texte en minuscule";
     }
 }
