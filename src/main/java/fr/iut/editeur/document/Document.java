@@ -46,6 +46,11 @@ public class Document {
         texte = premierPartie + inserer+ deuxiemePartie;
 
     }
+        public void minuscules(int debut, int fin) {
+        String debutTexte = texte.substring(0, debut);
+        String finTexte = texte.substring(fin);
+        texte = debutTexte + texte.substring(debut, fin).toLowerCase() + finTexte;
+    }
 
     @Override
     public String toString() {
