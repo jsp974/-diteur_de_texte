@@ -2,34 +2,34 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String texteDocument;
 
     public Document() {
-        this.texte = "";
+        this.texteDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getTexteDocument() {
+        return texteDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setTexteDocument(String texteDocument) {
+        this.texteDocument = texteDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.texteDocument += texte;
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + remplacement + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        texteDocument = partieGauche + remplacement + partieDroite;
     }
 
     public void majuscules(int debut, int fin) {
-        String debutTexte = texte.substring(0, debut);
-        String finTexte = texte.substring(fin);
-        texte = debutTexte + texte.substring(debut, fin).toUpperCase() + finTexte;
+        String debutTexte = texteDocument.substring(0, debut);
+        String finTexte = texteDocument.substring(fin);
+        texteDocument = debutTexte + texteDocument.substring(debut, fin).toUpperCase() + finTexte;
     }
 
     public void effacer(int debut, int fin) {
@@ -37,23 +37,23 @@ public class Document {
     }
 
     public void clear() {
-        setTexte("");
+        setTexteDocument("");
     }
 
     public void inserer (int position, String  inserer){
-        String premierPartie = texte.substring(0, position);
-        String deuxiemePartie = texte.substring(position, texte.length());
-        texte = premierPartie + inserer+ deuxiemePartie;
+        String premierPartie = texteDocument.substring(0, position);
+        String deuxiemePartie = texteDocument.substring(position, texteDocument.length());
+        texteDocument = premierPartie + inserer+ deuxiemePartie;
 
     }
         public void minuscules(int debut, int fin) {
-        String debutTexte = texte.substring(0, debut);
-        String finTexte = texte.substring(fin);
-        texte = debutTexte + texte.substring(debut, fin).toLowerCase() + finTexte;
+        String debutTexte = texteDocument.substring(0, debut);
+        String finTexte = texteDocument.substring(fin);
+        texteDocument = debutTexte + texteDocument.substring(debut, fin).toLowerCase() + finTexte;
     }
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.texteDocument;
     }
 }
